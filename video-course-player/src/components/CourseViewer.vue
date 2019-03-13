@@ -90,15 +90,37 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     @media only screen and (max-width: 769px) {
-        .course-viewer {
-            display:flex;
-            flex-direction: column-reverse;
-            height: 100vh;
-            align-items: stretch;
-        }
+        @media only screen and (max-height: 500px) {
+            .course-viewer {
+                display:flex;
+                flex-direction: column-reverse;
+                /*height: calc(100vh + 250px);*/
+                align-items: stretch;
+            }
 
-        .video {
-            min-height: calc(100vw / 1.6);
+            .video {
+                min-height: calc(100vw / 1.6);
+            }
+
+            .v-list{
+                min-height: 250px;
+            }
+        }
+        @media only screen and (min-height: 500px) {
+            .course-viewer {
+                display:flex;
+                flex-direction: column-reverse;
+                height: 100vh;
+                align-items: stretch;
+            }
+
+            .video {
+                min-height: calc(100vw / 1.6);
+            }
+
+            .v-list{
+                min-height: 150px;
+            }
         }
     }
     @media only screen and (min-width: 769px) {
